@@ -22,7 +22,7 @@ Formally:
 **Maximize (objective):**
 
 $$
-\text{Value (\$)} = \sum_{i=1}^{n} v_i x_i
+\text{Total Value in dollars} = \sum_{i=1}^{n} v_i x_i
 $$
 
 **Subject to:**
@@ -32,10 +32,10 @@ $$
 $$
 
 **Where**  
-- \( v_i \): value of item *i* in **dollars**  
-- \( w_i \): volume of item *i* in **m³**  
-- \( C \): capacity (3.0 m³ in this case)  
-- \( x_i \): decision variable (0/1)
+- $v_i$: value of item *i* in **dollars**  
+- $w_i$: volume of item *i* in **m³**  
+- $C$: capacity (3.0 m³ in this case)  
+- $x_i$: decision variable (0/1)  
 
 ---
 
