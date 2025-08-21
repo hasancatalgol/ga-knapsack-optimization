@@ -18,21 +18,24 @@ The dataset is stored in [`items.csv`](items.csv) with columns:
 This is a version of the **0/1 knapsack problem**, where each item can be either taken (`1`) or not taken (`0`).  
 Formally:
 
-**Maximize:**
-\[
+
+**Maximize (objective):**
+
+$$
 \text{Value (\$)} = \sum_{i=1}^{n} v_i x_i
-\]
+$$
 
 **Subject to:**
-\[
-\sum_{i=1}^{n} w_i x_i \leq C, \quad x_i \in \{0,1\}
-\]
 
-Where:
-- \( v_i \) = value of item *i* in **dollars**  
-- \( w_i \) = volume of item *i* in **m³**  
-- \( C \) = capacity (3.0 m³ in this case)  
-- \( x_i \) = decision variable (0/1)
+$$
+\sum_{i=1}^{n} w_i x_i \le C, \quad x_i \in \{0,1\}
+$$
+
+**Where**  
+- \( v_i \): value of item *i* in **dollars**  
+- \( w_i \): volume of item *i* in **m³**  
+- \( C \): capacity (3.0 m³ in this case)  
+- \( x_i \): decision variable (0/1)
 
 ---
 
