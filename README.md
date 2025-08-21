@@ -78,6 +78,37 @@ In this repo:
 
 ---
 
+## ⚙️ GA Parameters Explained
+
+Here are the key parameters used in this project’s GA configuration:
+
+- **`num_generations=800`** → number of evolutionary cycles to run. More generations allow better convergence but take longer.  
+- **`sol_per_pop=60`** → population size (number of candidate solutions per generation). Larger = more diversity, but more computation.  
+- **`num_genes=len(names)`** → chromosome length, equal to the number of items in the dataset.  
+
+### Genes & Representation
+- **`gene_space=[0, 1]`** → restricts each gene to 0/1 (don’t take / take item).  
+- **`gene_type=int`** → ensures genes are stored as integers.  
+- **`allow_duplicate_genes=True`** → irrelevant for this binary problem, but required for consistency.  
+
+### Fitness
+- **`fitness_func=fitness_func`** → evaluates solutions based on total value, with penalties for exceeding capacity.  
+
+### Parent Selection & Reproduction
+- **`num_parents_mating=20`** → number of parents selected each generation.  
+- **`parent_selection_type="sss"`** → “stochastic universal sampling”, a fair selection proportional to fitness.  
+- **`keep_parents=4`** → elitism: best solutions are carried forward unchanged.  
+
+### Crossover & Mutation
+- **`crossover_type="two_points"`** → two crossover points swap genes between parents.  
+- **`mutation_type="random"`** → randomly flips genes.  
+- **`mutation_percent_genes=12`** → percentage of genes mutated in each offspring (≈12%).  
+
+### Reproducibility
+- **`random_seed=SEED`** → ensures results are repeatable across runs.  
+
+---
+
 ## 🚀 Running the Code
 
 ### 1. Install dependencies
